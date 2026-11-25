@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "docflow-project-inspector": {
+      "command": "node",
+      "args": [
+        "./app/dist/mcp/docflow-readonly-server.js"
+      ],
+      "env": {
+        "DB_READONLY": "true",
+        "SQLITE_OPEN_READONLY": "true",
+        "DOCFLOW_MCP_MODE": "READONLY",
+        "ALLOW_EXTERNAL_NETWORK": "false"
+      }
+    },
+    "docflow-spreadsheet-inspector": {
+      "command": "node",
+      "args": [
+        "./app/dist/mcp/spreadsheet-readonly-server.js"
+      ],
+      "env": {
+        "DB_READONLY": "true",
+        "SOURCE_SNAPSHOT_READONLY": "true",
+        "DISABLE_OFFICE_MACROS": "true"
+      }
+    }
+  }
+}

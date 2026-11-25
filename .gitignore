@@ -1,0 +1,64 @@
+# Hệ điều hành & Editor
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# File tạm của Microsoft Office / LibreOffice
+~$*
+.~lock.*#
+*.tmp
+*.bak
+
+# Phụ thuộc & kết quả đóng gói Node.js / Electron / TypeScript
+node_modules/
+dist/
+dist-electron/
+out/
+build/
+release/
+.tsbuildinfo
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Báo cáo kiểm thử & độ phủ mã nguồn
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Cơ sở dữ liệu cục bộ SQLite & khóa phiên làm việc
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db-wal
+*.db-shm
+.project.lock
+
+# Dữ liệu dự án người dùng & vùng làm việc tạm thời (không đưa vào Git)
+projects/
+user-projects/
+working/
+.docflow-working/
+
+# Thư mục tài liệu mẫu nhạy cảm dùng đo kiểm cục bộ (chỉ đọc, không đẩy lên VCS)
+corpus/
+
+# Biến môi trường & cấu hình cục bộ chứa khóa bí mật
+.env
+.env.*
+!.env.example
+.agents/mcp_config.json
+
+# Tệp trạng thái tạm của công cụ điều phối cục bộ
+.claude/.cc-writes

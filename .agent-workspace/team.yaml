@@ -1,0 +1,31 @@
+schemaVersion: 1
+team:
+  libraryId: nhom-docflow-studio-prototype
+  id: nhom-docflow-studio-prototype
+  name: Nhóm DocFlow Studio (Prototype)
+  version: 0.1.0
+lineage:
+  sourceHash: sha256:79a2f9c50e50976197d865e98d0174b794202ad3a7c94d190b09bab0e2c60acc
+  templateId: ai-team-builder
+appliedAt: 2026-11-25T09:04:54.684Z
+agents:
+  - id: main
+    role: Orchestrator
+    provider: codex-cli
+    model: null
+    main: true
+  - id: ba
+    role: Chuyên viên phân tích nghiệp vụ
+    provider: claude-code
+    model: null
+    main: false
+  - id: dev
+    role: Lập trình viên prototype
+    provider: claude-code
+    model: null
+    main: false
+  - id: qa
+    role: Kiểm thử độc lập
+    provider: claude-code
+    model: null
+    main: false

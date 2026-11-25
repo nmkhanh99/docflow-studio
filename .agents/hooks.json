@@ -1,0 +1,36 @@
+{
+  "docflow-immutable-guard": {
+    "enabled": true,
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "node ./scripts/session-context.mjs",
+        "timeout": 5
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "write_file|edit_file|delete_file|run_command|call_mcp_tool",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ./scripts/guard-immutable-paths.mjs",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "write_file|edit_file|run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ./scripts/verify-post-tool-integrity.mjs",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
